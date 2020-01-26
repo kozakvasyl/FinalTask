@@ -1,0 +1,47 @@
+// Breadcrumbs
+//  ---------------------------------------------
+@breadcrumbs__font-size: 13px;
+@breadcrumbs-link__visited__color: @color-gray60;
+@breadcrumbs-current__color: @color-gray60;
+@breadcrumbs-icon__font-color: @color-gray60;
+
+// colors
+//  ---------------------------------------------
+
+
+
+//layout
+//-------------------------------------------
+@layout__max-width: 1140px;
+@layout__width-xs-indent: 0;
+@layout-indent__width: 0;
+
+//custom queries
+//-------------------------------------------
+@screen__lm: 1140px;
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+
+    @media all and (min-width: @screen__lm),
+    print {
+        .media-width('min', @screen__lm);
+    }
+}
+
+//  Links
+//  ---------------------------------------------
+/* @link__color: #777777;
+@link__hover__color: #777777;
+@link__visited__color: #555555; */
+
+//buttons
+//-------------------------------------------
+/* @button__padding: 15px 30px;
+@button__border-radius: 0;
+@button-primary__background: @color-red10;
+@button-primary__border: none;
+@button-primary__font-size: 14px;
+@button-primary__hover__background: @color-yellow1;
+@button-primary__hover__color: #3c3f43;
+@button-primary__hover__border: none;
+@button-primary__active__border: none; */
+

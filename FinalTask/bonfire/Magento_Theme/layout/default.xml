@@ -8,10 +8,12 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <move element="store_language" destination="header-wrapper" before="-"/>
+
         <referenceBlock name="store.menu">
-            <container name="right.wrapper" htmlTag="div" htmlClass="right-wrapper" after="-"></container>
+            <container name="searsh.wishlist.wrapper" htmlTag="div" htmlClass="searsh-wishlist-wrapper" after="-"></container>
         </referenceBlock>
+
+        <move element="wish-list-link" destination="searsh.wishlist.wrapper"/>
+        <move element="top.search" destination="searsh.wishlist.wrapper"/>
     </body>
-        <move element="wish-list-link" destination="right.wrapper"/>
-        <move element="top.search" destination="right.wrapper"/>
 </page>
