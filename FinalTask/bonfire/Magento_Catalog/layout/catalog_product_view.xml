@@ -13,10 +13,15 @@
 
         <referenceBlock name="product.info.main">
             <container name="stock.sku.tag.wrapper" htmlTag="div" htmlClass="stock-sku-tag-wrapper" after="product.info.price"></container>
+            <container name="add.to.wrapper" htmlTag="div" htmlClass="add-to-wrapper" after="product.info"></container>
+            <!-- <block name="product.info.overview" after="stock.sku.tag.wrapper"></block> -->
         </referenceBlock>
 
         <move element="product.info.type" destination="stock.sku.tag.wrapper" before = "-"/>
         <move element="product.info.sku" destination="stock.sku.tag.wrapper" after = "product.info.type"/>
         <move element="product.attributes" destination="stock.sku.tag.wrapper" after = "-"/>
+        <move element="product.info.overview" destination="product.info.main" after = "stock.sku.tag.wrapper"/>
+        <move element="view.addto.wishlist" destination="add.to.wrapper" after = "-"/>
+        <referenceBlock name="view.addto.compare" remove="true"></referenceBlock>
     </body>
 </page>
