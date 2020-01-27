@@ -34,11 +34,11 @@
         <?php endif; ?>
         <?php if ($_product->isSaleable() && $block->hasOptions() && $block->getOptionsContainer() == 'container2') :?>
             <?= $block->getChildChildHtml('options_container') ?>
-        <?php endif;?>
-        <?= $block->getChildHtml('form_bottom') ?>
-    </form>
+            <?php endif;?>
+            <?= $block->getChildHtml('form_bottom') ?>
+        </form>
+        <a><?= __('Clear Selection') ?></a>
 
-    <a><?= __('Clear Selection') ?></a>
 </div>
 
 <script type="text/x-magento-init">

@@ -1920,7 +1920,7 @@ Please correct the email address.,Виправте адресу електрон
 We're unable to send the password reset email.,Ми не можемо відправити по електронній пошті для скидання пароля.,module,Magento_Customer
 Please enter your email.,"Будь ласка, введіть Вашу адресу електронної пошти.",module,Magento_Customer
 If there is an account associated with %1 you will receive an email with a link to reset your password.,"Якщо є акаунт, пов'язаний з %1 ви отримаєте лист з посиланням для скидання пароля.",module,Magento_Customer
-My Account,Гараж,module,Magento_Customer
+My Account,Мій акаунт,module,Magento_Customer
 "This account is not confirmed. <a href=""%1"">Click here</a> to resend confirmation email.","Цей рахунок не підтверджується. <a href=""%1""> Натисніть тут </a>, щоб надіслати електронною поштою підтвердження.",module,Magento_Customer
 Invalid login or password.,Невірний Логін або пароль.,module,Magento_Customer
 An unspecified error occurred. Please contact us for assistance.,"Виникла невідома помилка. Будь ласка, зв'яжіться з нами для отримання допомоги.",module,Magento_Customer

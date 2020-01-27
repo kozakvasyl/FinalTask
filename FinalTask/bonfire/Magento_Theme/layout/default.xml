@@ -15,5 +15,12 @@
 
         <move element="wish-list-link" destination="searsh.wishlist.wrapper"/>
         <move element="top.search" destination="searsh.wishlist.wrapper"/>
+
+        <referenceBlock name="authorization-link" remove="true"/>
+        <referenceBlock name="my-account-link" remove="true"/>
+        <referenceBlock name="register-link" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
     </body>
 </page>
