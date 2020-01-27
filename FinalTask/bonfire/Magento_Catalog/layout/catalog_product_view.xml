@@ -14,6 +14,14 @@
         <referenceBlock name="product.info.main">
             <container name="stock.sku.tag.wrapper" htmlTag="div" htmlClass="stock-sku-tag-wrapper" after="product.info.price"></container>
             <!-- <block name="product.info.overview" after="stock.sku.tag.wrapper"></block> -->
+            <referenceContainer name="product.info.social">
+                <referenceBlock name="product.info.mailto" remove="true"/>
+                <block class="Magento\Cms\Block\Block" name="share-this" after="-">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">share-this</argument>
+                    </arguments>
+                </block>
+            </referenceContainer>
         </referenceBlock>
 
         <move element="product.info.type" destination="stock.sku.tag.wrapper" before = "-"/>
@@ -23,6 +31,6 @@
         <move element="view.addto.wishlist" destination="product.info.options.wrapper.bottom" after = "-"/>
         <!-- <move element="product.info.addtocart.additional" destination="add.to.wrapper" before = "-"/> -->
 
-        <referenceBlock name="view.addto.compare" remove="true"></referenceBlock>
+        <referenceBlock name="view.addto.compare" remove="true"/>
     </body>
 </page>
