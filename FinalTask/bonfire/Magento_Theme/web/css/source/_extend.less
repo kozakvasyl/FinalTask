@@ -5,6 +5,27 @@
     body * {
         font-family: Lato, Arial, Helvetica, sans-serif;
     }
+    .logo {
+        position: absolute;
+        left: 50%;
+        margin-left: -76px;
+        z-index: 50;
+        margin-bottom: 0;
+    }
+    .page-footer {
+        text-align: center;
+        .footer.content {
+            margin: 0 auto;
+            padding: 0 0 30px 0;
+            border: none;
+            .copyright {
+                margin: 0;
+                color: #b5b5b5;
+                font-size: 13px;
+            }
+        }
+    }
+
 }
 
 //mobile
@@ -17,9 +38,8 @@
 }
 //desctop
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    .logo {
-        float: none;
-    }
+    //HEADER styles---------------------------------------
+
     .panel.wrapper {
         background-color: #d9e1e6;
         border: none;
@@ -31,7 +51,7 @@
                 float: none;
                 vertical-align: middle;
                 li {
-                    margin: 5px 0 5px 0;
+                    margin: 5px 0 6px 0;
                     span {
                         color: #868f93;
                         text-transform: uppercase;
@@ -41,6 +61,8 @@
             }
         }
     }
+    //FOOTER styles-----------------------------------------
+    
 }
 //custom
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l-custome) {
