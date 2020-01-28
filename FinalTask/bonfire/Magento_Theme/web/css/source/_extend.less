@@ -1,5 +1,48 @@
 @import '_variables.less';
 
+//all screen size
 & when (@media-common = true) {
-    
+    body * {
+        font-family: Lato, Arial, Helvetica, sans-serif;
+    }
+}
+
+//mobile
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+
+}
+//tablet
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+}
+//desctop
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .logo {
+        float: none;
+    }
+    .panel.wrapper {
+        background-color: #d9e1e6;
+        border: none;
+        .panel.header {
+            text-align: center;
+            padding: 0;
+            line-height: 10px;
+            .header.links {
+                float: none;
+                vertical-align: middle;
+                li {
+                    margin: 5px 0 5px 0;
+                    span {
+                        color: #868f93;
+                        text-transform: uppercase;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+//custom
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l-custome) {
+
 }

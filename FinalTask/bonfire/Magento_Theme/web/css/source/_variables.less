@@ -7,8 +7,18 @@
 
 // colors
 //  ---------------------------------------------
-
-
+@color-black_custom: #111111;
+// fonts
+//  ---------------------------------------------
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 
 //layout
 //-------------------------------------------
@@ -18,12 +28,12 @@
 
 //custom queries
 //-------------------------------------------
-@screen__lm: 1140px;
+@screen__l-custome: 1140px;
 & when (@media-target = 'desktop'), (@media-target = 'all') {
 
-    @media all and (min-width: @screen__lm),
+    @media all and (min-width: @screen__l-custome),
     print {
-        .media-width('min', @screen__lm);
+        .media-width('min', @screen__l-custome);
     }
 }
 
