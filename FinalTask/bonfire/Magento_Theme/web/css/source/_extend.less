@@ -161,6 +161,81 @@
             }
         }
     }
+    .nav-sections {
+        background-color: unset;
+        border: 1px solid @color-white-smoke;
+        .section-item-content.nav-sections-item-content {
+            margin: 0 auto;
+            max-width: 1140px;
+            text-align: center;
+            .navigation {
+                display: inline-block;
+                margin: 0 auto;
+                width: auto;
+            }
+            .searsh-wishlist-wrapper {
+                display: block;
+                float: right;
+                .link.wishlist {
+                    display: inline-block;
+                }
+                .block-search {
+                    width: unset;
+                    padding: 0;
+                    .block-content {
+                        .form.minisearch {
+                            .field.search {
+                                .label {
+                                    display: block;
+                                    height: auto;
+                                    width: auto;
+                                    right: 0;
+                                    clip: unset;
+                                    &::before {
+                                        color: @color-black_custom;
+                                        font-size: 30px;
+                                    }
+                                    &:hover {
+                                        &::before {
+                                            color: #868f93;
+                                        }
+                                    }
+                                }
+                                .label.active {
+                                    &::before {
+                                        color: #868f93;
+                                    }
+                                }
+                                .control {
+                                    display: block;
+                                    padding: 0;
+                                    position: absolute;
+                                    top: 25px;
+                                    right: 25px;
+                                    min-width: 200px;
+                                    width: auto;
+                                    opacity: 0;
+                                    #search {
+                                        padding: 0 10px;
+                                    }
+                                    .nested {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        .form.minisearch.active {
+                            .field.search {
+                                .control {
+                                    opacity: 100;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     //FOOTER styles-----------------------------------------
     
 }
