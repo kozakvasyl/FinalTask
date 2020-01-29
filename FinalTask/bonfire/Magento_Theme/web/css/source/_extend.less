@@ -40,32 +40,7 @@
             margin: 0 0 0 -67px;
             top: 42px;
         }
-        .minicart-wrapper {
-            .showcart {
-                &::before {
-                    content: unset;
-                }
-                .text {
-                    display: inline-block;
-                    height: auto;
-                    width: auto;
-                    margin: 0;
-                    clip: unset;
-                    position: unset;
-                }
-                .counter.qty {
-                    color: @color-black_custom;
-                    background-color: unset;
-                    height: unset;
-                    line-height: unset;
-                    margin: 0;
-                    padding: 0;
-                }
-                .counter.qty.empty {
-                    display: inline-block;
-                }
-            }
-        }
+        
     }
 
     .page-footer {
@@ -96,22 +71,73 @@
         .nav-toggle {
             top: 35px;
         }
+        .minicart-wrapper {
+            margin: 0 13px 0 0;
+            position: relative;
+            .showcart {
+                .counter.qty {
+                    color: @color-black_custom;
+                    background-color: @color-yellow;
+                }
+                .counter.qty.empty {
+                    display: inline-block;
+                    position: absolute;
+                    right: -10px;
+                    bottom: 20px;
+                }
+            }
+        }
     }
 }
 //desctop
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     //HEADER styles---------------------------------------
-    .logo {
-        margin: 0 0 0 -67px;
-    }
     .nav-toggle {
-        top: 116px;
+        top: 125px;
         display: block;
     }
     .header.content {
         padding: 37px 0 37px 0;
         .switcher {
             display: inline-block;
+            padding-top: 13px;
+        }
+        .logo {
+            margin: 0 0 0 -67px;
+            top: 47px;
+        }
+        .minicart-wrapper {
+            border: 2px solid @color-yellow;
+            padding: 13px 38px;
+            line-height: 12px;
+            .showcart {
+                color: #111111;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                &::before {
+                    content: unset;
+                }
+                .text {
+                    display: inline-block;
+                    height: auto;
+                    width: auto;
+                    margin: 0;
+                    clip: unset;
+                    position: unset;
+                }
+                .counter.qty {
+                    color: @color-black_custom;
+                    background-color: unset;
+                    height: unset;
+                    line-height: unset;
+                    margin: 0;
+                    padding: 0;
+                }
+                .counter.qty.empty {
+                    display: inline-block;
+                }
+            }
         }
     }
     .panel.wrapper {
