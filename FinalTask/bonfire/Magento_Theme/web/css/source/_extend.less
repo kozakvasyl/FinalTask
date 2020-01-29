@@ -7,10 +7,17 @@
     }
 
     .header.content {
-        padding: 37px 0 37px 0;
-    
+        padding: 37px 10px;
         .nav-toggle {
-            left: 0;
+            left: 10px;
+            &::before {
+                color: @color-black_custom;
+            }
+            &:hover {
+                &::before {
+                    color: @color-blue-gray;
+                }
+            }
         }
         .view-usd, .view-ukr{
             &::before {
@@ -40,7 +47,9 @@
             margin: 0 0 0 -67px;
             top: 42px;
         }
-        
+    }
+    .section-item-content.nav-sections-item-content {
+        padding: 0 10px;
     }
 
     .page-footer {
@@ -91,13 +100,12 @@
 }
 //desctop
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-    //HEADER styles---------------------------------------
     .nav-toggle {
-        top: 125px;
+        top: 135px;
         display: block;
     }
     .header.content {
-        padding: 37px 0 37px 0;
+        padding: 37px 10px;
         .switcher {
             display: inline-block;
             padding-top: 13px;
@@ -107,14 +115,15 @@
             top: 47px;
         }
         .minicart-wrapper {
-            border: 2px solid @color-yellow;
-            padding: 13px 38px;
             line-height: 12px;
+            margin-right: 0;
             .showcart {
                 color: #111111;
                 font-size: 12px;
                 font-weight: 600;
                 text-transform: uppercase;
+                border: 2px solid #ded3aa;
+                padding: 13px 38px;
                 &::before {
                     content: unset;
                 }
@@ -172,18 +181,74 @@
                 display: inline-block;
                 margin: 0 auto;
                 width: auto;
+                margin-left: 76px;
+                .ui-menu.ui-widget.ui-widget-content.ui-corner-all {
+                    .level0 {
+                        &:hover {
+                            border-bottom: 2px solid #d9e1e6;
+                        }
+                        .level-top.ui-corner-all {
+                            text-transform: uppercase;
+                        }
+                        //submenu
+                        .level0.submenu {
+                            .level1 {
+                                .ui-corner-all {
+                                    text-transform: uppercase;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    .level0.home.ui-menu-item {
+                        margin-right: -3px;
+                    }
+                    .active:hover, .has-active:hover {
+                        border-bottom: none;
+                    }
+                }
             }
             .searsh-wishlist-wrapper {
                 display: block;
                 float: right;
+                line-height: 68px;
                 .link.wishlist {
                     display: inline-block;
+                    padding-right: 15px;
+                    border-right: 1px dotted @color-black_custom;
+                    height: 30px;
+                    vertical-align: middle;
+                    a {
+                        &::before {
+                            content: '\f004';
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 100;
+                            font-size: 20px;
+                            color: #111111;
+                            display: block;
+                            line-height: 30px;
+                        }
+                        &:hover {
+                            &::before {
+                                color: @color-blue-gray;
+                            }
+                        }
+                        .lable-wishlist {
+                            display: none;
+                        }
+                    }
                 }
                 .block-search {
                     width: unset;
                     padding: 0;
+                    margin-top: 14px;
                     .block-content {
                         .form.minisearch {
+                            width: 40px;
+                            height: 40px;
+                            overflow: hidden;
+                            position: relative;
+                            line-height: 40px;
                             .field.search {
                                 .label {
                                     display: block;
@@ -194,28 +259,27 @@
                                     &::before {
                                         color: @color-black_custom;
                                         font-size: 30px;
+                                        line-height: unset;
                                     }
                                     &:hover {
                                         &::before {
-                                            color: #868f93;
+                                            color: @color-blue-gray;
                                         }
                                     }
                                 }
                                 .label.active {
                                     &::before {
-                                        color: #868f93;
+                                        color: @color-blue-gray;
                                     }
                                 }
                                 .control {
                                     display: block;
                                     padding: 0;
                                     position: absolute;
-                                    top: 25px;
-                                    right: 25px;
-                                    min-width: 200px;
-                                    width: auto;
-                                    opacity: 0;
-                                    #search {
+                                    top: 0;
+                                    right: 40px;
+                                    width: 200px;
+                                    .input-text {
                                         padding: 0 10px;
                                     }
                                     .nested {
@@ -223,23 +287,29 @@
                                     }
                                 }
                             }
+                            .actions {
+                                display: none;
+                            }
                         }
                         .form.minisearch.active {
-                            .field.search {
-                                .control {
-                                    opacity: 100;
-                                }
-                            }
+                            overflow: unset;
                         }
                     }
                 }
             }
         }
     }
-    //FOOTER styles-----------------------------------------
-    
 }
 //custom
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l-custome) {
-
+    .header.content {
+        padding: 37px 0;
+        .nav-toggle {
+            left: 0;
+        }
+    }
+    .section-item-content.nav-sections-item-content, .page-main {
+        padding: 0;
+    }
+    
 }
