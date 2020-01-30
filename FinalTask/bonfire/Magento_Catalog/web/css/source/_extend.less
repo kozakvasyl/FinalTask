@@ -82,6 +82,42 @@
                 }
             }
         }
+        .product.attribute.overview {
+            margin: 0 0 40px 0;
+            color: @color-grey;
+            p {
+                margin: 0 0 30px 0;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+        .product-add-form {
+            .product-options-wrapper {
+                .fieldset {
+                    text-transform: uppercase;
+                    .field {
+                        .label {
+                            margin: 0 0 20px 0;
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                a {
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    color: #111111;
+                    cursor: pointer;
+                    font-size: 12px;
+                    &:hover {
+                        text-decoration: none;
+                        color: currentColor;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -103,8 +139,43 @@
             width: 56%;
         }
     }
+/*     .product-info-main {
+        .product-add-form {
+            .product-options-wrapper {
+                .fieldset {
+                    .field {
+                        display: inline-block;
+                        margin: 0 28px 0 0;
+                    }
+                    .qty {
+                        margin: 0;
+                        .control {
+                            width: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    } */
 }
 //custom
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l-custome) {
-
+    .product-info-main {
+        .product-add-form {
+            .product-options-wrapper {
+                .fieldset {
+                    .field {
+                        display: inline-block;
+                        margin: 0 28px 0 0;
+                    }
+                    .qty {
+                        margin: 0;
+                        .control {
+                            width: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
