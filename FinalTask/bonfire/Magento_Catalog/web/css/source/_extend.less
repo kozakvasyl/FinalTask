@@ -154,43 +154,77 @@
         .product-social-links {
             border-top: 1px solid @color-white-smoke;
             border-bottom: 1px solid @color-white-smoke;
-            padding: 16px 0;
+            padding: 8px 0 5px 0;
+            text-align: center;
             .product-addto-links {
                 display: none;
-            }
-            & > * {
-                display: inline-block;
-                margin-right: 20px;
-                font-size: 12px;
-                &:last-child {
-                    margin: 0;
-                }
-                & > * {
-                    display: inline-block;
-                    padding: 3px 5px;
-                    border-radius: 3px;
-                    border: 1px solid @color-white-smoke;
-                    margin-right: 3px;
-                    color: #fff;
-                    &:last-child {
-                        margin: 0;
-                        color: @color-blue-gray;
-                    }
-                }
             }
             span {
                 text-transform: uppercase;
                 font-weight: 600;
+                display: block;
+                margin: 0 0 20px 0;
+                font-size: 12px;
             }
-            .facebook-likes {
-                background-color: #4863b7;
+            .social_wrapper {
+                display: block;
+                & > * {
+                    display: inline-block;
+                    margin: 0 20px 10px 0;
+                    font-size: 12px;
+                    &:last-child {
+                        margin: 0 0 10px 0;
+                    }
+                    & > * {
+                        display: inline-block;
+                        padding: 3px 5px;
+                        border-radius: 3px;
+                        border: 1px solid @color-white-smoke;
+                        margin-right: 3px;
+                        color: #fff;
+                        &:last-child {
+                            margin: 0;
+                            color: @color-blue-gray;
+                        }
+                    }
+                }
+                .facebook-likes {
+                    background-color: #4863b7;
+                    &::before {
+                        content: url('../images/facebook.png');
+                    }
+                }
+                .facebook-shares {
+                    background-color: #5775d1;
+                }
+                .facebook-shares-qty, .twitter-likes {
+                    color: @color-blue-gray; 
+                }
+                .facebook-likes, .twitter-likes {
+                    position: relative;
+                    padding-left: 20px;
+                    &::before {
+                        position: absolute;
+                        left: 4px;
+                        top: 5px;
+                    }
+                }
+                .twitter-likes, .pinterrest-likes {
+                    background-color: #cecccc;
+                    background-image: linear-gradient(#fff, #cecccc);
+                }
+                .twitter-likes::before {
+                    content: url('../images/twitter.png');
+                }
+                .pinterrest-likes {
+                    position: relative;
+                    &::before {
+                        content: url('../images/pin_it.png');
+                        position: absolute;
+                    }
+                }
             }
-            .facebook-shares {
-                background-color: #5775d1;
-            }
-            .facebook-shares-qty {
-                color: @color-blue-gray;
-            }
+
         }
     }
 }
@@ -219,6 +253,16 @@
                 & > * {
                     width: 100%;
                 }
+            }
+        }
+        .product-social-links {
+            text-align: left;
+            span {
+                display: inline-block;
+                margin: 0 20px 20px 0;
+            }
+            .social_wrapper {
+                display: inline-block;
             }
         }
     }
@@ -253,6 +297,9 @@
                     float: right;
                 }
             }
+        }
+        .product-social-links {
+            padding: 15px 0 0 0;
         }
     }
 }
