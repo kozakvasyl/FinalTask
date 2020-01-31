@@ -50,8 +50,16 @@
     }
     .section-item-content.nav-sections-item-content {
         padding: 0 10px;
+        .level0 {
+            border-bottom: 2px solid #fff;
+        }
+        .active {
+            border-bottom: 2px solid @color-yellow;
+            &:hover {
+                border-bottom: 2px solid @color-yellow !important;
+            }
+        }
     }
-
     .page-footer {
         text-align: center;
         .footer.content {
