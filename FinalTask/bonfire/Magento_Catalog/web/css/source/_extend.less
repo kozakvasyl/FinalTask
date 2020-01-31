@@ -170,7 +170,7 @@
                 display: block;
                 & > * {
                     display: inline-block;
-                    margin: 0 20px 10px 0;
+                    margin: 0 19px 10px 0;
                     font-size: 12px;
                     &:last-child {
                         margin: 0 0 10px 0;
@@ -182,6 +182,7 @@
                         border: 1px solid @color-white-smoke;
                         margin-right: 3px;
                         color: #fff;
+                        position: relative;
                         &:last-child {
                             margin: 0;
                             color: @color-blue-gray;
@@ -198,7 +199,28 @@
                     background-color: #5775d1;
                 }
                 .facebook-shares-qty, .twitter-likes {
-                    color: @color-blue-gray; 
+                    color: @color-blue-gray;
+                    text-transform: unset;
+                }
+                .facebook-shares-qty, .twitter-qty, .pinterrest-qty {
+                    &::before {
+                        content: '';
+                        border: 5px solid;
+                        border-color: transparent #fff transparent transparent;
+                        z-index: 99;
+                        position: absolute;
+                        left: -10px;
+                        top: 6px;
+                    }
+                    &::after {
+                        content: '';
+                        border: 6px solid;
+                        border-color: transparent @color-white-smoke transparent transparent;
+                        z-index: 98;
+                        left: -12px;
+                        top: 5px;
+                        position: absolute;
+                    }
                 }
                 .facebook-likes, .twitter-likes {
                     position: relative;
@@ -221,6 +243,22 @@
                     &::before {
                         content: url('../images/pin_it.png');
                         position: absolute;
+                    }
+                }
+                .pinterrest-qty {
+                    padding-left: 1px;
+                    margin-left: 6px;
+                    &::before {
+                        border: 12px solid;
+                        border-color: transparent #fff transparent transparent;
+                        left: -23px;
+                        top: 0px;
+                    }
+                    &::after {
+                        border: 13px solid;
+                        border-color: transparent #f5f5f5 transparent transparent;
+                        left: -25px;
+                        top: -1px;
                     }
                 }
             }
