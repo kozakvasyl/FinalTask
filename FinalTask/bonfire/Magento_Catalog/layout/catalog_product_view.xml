@@ -13,7 +13,6 @@
 
         <referenceBlock name="product.info.main">
             <container name="stock.sku.tag.wrapper" htmlTag="div" htmlClass="stock-sku-tag-wrapper" after="product.info.price"></container>
-            <!-- <block name="product.info.overview" after="stock.sku.tag.wrapper"></block> -->
             <referenceContainer name="product.info.social">
                 <referenceBlock name="product.info.mailto" remove="true"/>
                 <block class="Magento\Cms\Block\Block" name="share-this" after="-">
@@ -29,8 +28,13 @@
         <move element="product.attributes" destination="stock.sku.tag.wrapper" after = "-"/>
         <move element="product.info.overview" destination="product.info.main" after = "stock.sku.tag.wrapper"/>
         <move element="view.addto.wishlist" destination="product.info.options.wrapper.bottom" after = "-"/>
-        <!-- <move element="product.info.addtocart.additional" destination="add.to.wrapper" before = "-"/> -->
 
+        <move element="reviews.tab" destination="content" after="product.info.details"/>
+        <block class="Magento\Review\Block\Product\Review" name="reviews.tab" as="reviews" template="Magento_Review::review.phtml" group="detailed_info">
+            <block class="Magento\Review\Block\Product\View\ListView" name="product.info.product_additional_data" as="product_additional_data" template="product/view/list.phtml"/>
+        </block>
+        <move element="product.review.form" destination="content" after = "-"/>
+        <referenceBlock name="product.info.details" remove="true"/>
         <referenceBlock name="view.addto.compare" remove="true"/>
     </body>
 </page>

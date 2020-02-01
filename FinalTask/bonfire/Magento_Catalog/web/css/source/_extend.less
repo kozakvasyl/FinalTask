@@ -2,6 +2,7 @@
 //all screen size
 & when (@media-common = true) {
     .product-info-main {
+        margin-bottom: 20px;
         & > * {
             margin: 0 0 40px 0;
             &:last-child {
@@ -265,6 +266,9 @@
 
         }
     }
+    .block.review-list {
+        clear: both;
+    }
 }
 
 //mobile
@@ -320,6 +324,9 @@
                         .control {
                             width: 32px;
                         }
+                    }
+                    select {
+                        max-width: 160px;
                     }
                 }
             }
