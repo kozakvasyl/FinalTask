@@ -4,13 +4,13 @@
         display: block;
         position: relative;
     }
-    .hide-element {
+    .hide-element, .hide-header-panel {
         &:hover {
-            &::before {
-                color: @color-gray-middle5;
+            &::after {
+                color: @color-blue-gray;
             }
         }
-        &::before {
+        &::after {
             content: @icon-remove;
             font-family: 'icons-blank-theme';
             position: absolute;

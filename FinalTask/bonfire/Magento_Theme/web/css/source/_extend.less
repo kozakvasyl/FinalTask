@@ -166,13 +166,27 @@
             text-align: center;
             padding: 0;
             line-height: 10px;
+            position: relative;
+            .hide-header-panel {
+                &:hover {
+                    &::after {
+                        color: @color-black_custom;
+                    }
+                }
+                &::after {
+                    font-size: 26px;
+                    color: @color-blue-gray;
+                    top: 11px;
+                    right: -8px;
+                }
+            }
             .header.links {
                 float: none;
                 vertical-align: middle;
                 li {
                     margin: 5px 0 6px 0;
                     span {
-                        color: #868f93;
+                        color: @color-blue-gray;
                         text-transform: uppercase;
                         font-size: 10px;
                     }
