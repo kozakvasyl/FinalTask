@@ -149,6 +149,13 @@
                     padding: 20px 0;
                     text-align: center;
                     width: 100%;
+                    &::before {
+                        content: '\f004';
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 100;
+                        margin-right: 5px;
+                        font-size: 13px;
+                    }
                 }
             }
         }
@@ -269,15 +276,20 @@
     .block.review-list {
         clear: both;
     }
+    .review-form {
+        max-width: unset;
+    }
 }
 
 //mobile
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-    
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .review-ratings ~ .review-content, .review-ratings ~ .review-details {
+        margin-left: 110px;
+    }
 }
 //tablet
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-
+    
 }
 //desctop
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
@@ -307,6 +319,9 @@
                 display: inline-block;
             }
         }
+    }
+    .review-ratings ~ .review-content, .review-ratings ~ .review-details {
+        margin-left: 280px;
     }
 }
 //custom
