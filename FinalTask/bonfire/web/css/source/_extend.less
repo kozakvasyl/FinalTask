@@ -2,6 +2,24 @@
 & when (@media-common = true) {
     .column.main .show-element {
         display: block;
+        position: relative;
+    }
+    .hide-element {
+        &:hover {
+            &::before {
+                color: @color-gray-middle5;
+            }
+        }
+        &::before {
+            content: @icon-remove;
+            font-family: 'icons-blank-theme';
+            position: absolute;
+            font-size: 38px;
+            color: @color-black_custom;
+            right: -10px;
+            top: -10px;
+            cursor: pointer;
+        }
     }
 }
 
