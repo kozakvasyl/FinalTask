@@ -29,6 +29,13 @@ define([
         return false;
     });
 
+    //vlear selection
+    $('.product-options-wrapper').find('a').on('click',function(){
+        $('#attribute93')[0].selectedIndex = 0;
+        $('#attribute135')[0].selectedIndex = 0;
+        $('#qty').val(1);
+      });
+
     //select plugin
     $('.select-city, .select-phone').select2({
         scrollAfterSelect: false,

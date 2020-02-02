@@ -20,6 +20,7 @@
             .reviews-actions {
                 a {
                     color: @color-grey;
+                    margin: 0;
                     span {
                         &:last-child {
                             padding-right: 12px;
@@ -334,6 +335,14 @@
                 display: inline-block;
             }
         }
+        .product-reviews-summary .reviews-actions {
+            a span:last-child {
+                padding-right: 5px;
+            }
+            .add-review-button {
+                margin-left: 5px;
+            }
+        }
     }
     .review-ratings ~ .review-content, .review-ratings ~ .review-details {
         margin-left: 280px;
@@ -354,7 +363,7 @@
                         margin: 0;
                     }
                     select {
-                        max-width: 160px;
+                        max-width: 167px;
                     }
                 }
             }
@@ -369,6 +378,14 @@
                 .action.towishlist {
                     float: right;
                 }
+            }
+        }
+        .product-reviews-summary .reviews-actions {
+            a span:last-child {
+                padding-right: 12px;
+            }
+            .add-review-button {
+                margin-left: 12px;
             }
         }
         .product-social-links {
