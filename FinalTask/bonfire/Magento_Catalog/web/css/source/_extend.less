@@ -27,11 +27,16 @@
                         }
                     }
                 }
-                .add-review-buton {
+                .add-review-button {
                     text-transform: uppercase;
                     text-decoration: underline;
                     color: @color-black_custom;
                     margin-left: 12px;
+                    font-size: 12px;
+                    cursor: pointer;
+                    &:hover {
+                        text-decoration: none;
+                    }
                 }
             }
         }
@@ -110,6 +115,14 @@
                             &::after {
                                 display: none;
                             }
+                        }
+                    }
+                    .field.qty .control {
+                        width: 32px;
+                        position: relative;
+                        padding-right: 30px;
+                        .input-text {
+                            text-align: center;
                         }
                     }
                 }
@@ -273,7 +286,7 @@
 
         }
     }
-    .block.review-list, .review-form {
+    .block.review-list, .block.review-add {
         clear: both;
         display: none;
     }
@@ -338,9 +351,6 @@
                     }
                     .qty {
                         margin: 0;
-                        .control {
-                            width: 32px;
-                        }
                     }
                     select {
                         max-width: 160px;

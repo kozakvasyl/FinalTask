@@ -21,6 +21,39 @@
             cursor: pointer;
         }
     }
+    .button-sub, .button-add {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 15px;
+        right: 0;
+        border: 1px solid #c2c2c2;
+        border-left: none;
+        cursor: pointer;
+        &::before {
+            font-family: 'icons-blank-theme';
+            position: absolute;
+            font-size: 27px;
+            color: @color-gray80;
+            right: 0;
+        }
+    }
+    .button-add {
+        border-bottom: none;
+        top: 0;
+        &::before {
+            content: @icon-pointer-up;
+            top: -12px;
+        }
+    }
+    .button-sub {
+        bottom: 0;
+        &::before {
+            content: @icon-pointer-down;
+            bottom: -12px;
+        }
+    }
+    
 }
 
 

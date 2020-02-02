@@ -24,13 +24,13 @@ $urlForm = $block->getReviewsUrl() . '#review-form';
              </div>
          </div>
         <?php endif;?>
-        <div class="reviews-actions">
+        <div class="reviews-actions" data-mage-init='{"js/lib/scrollTo": {"btn": ".action.view", "elementToScroll": ".block.review-list"}}'>
             <a class="action view"
                href="<?= $block->escapeUrl($url) ?>">
                 <span itemprop="reviewCount"><?= $block->escapeHtml($block->getReviewsCount()) ?></span>&nbsp;
                 <span><?= $block->escapeHtml(__('Review(s)')) ?></span>
             </a>
-            <a href="" class="add-review-buton"><?= $block->escapeHtml(__('Add a review')) ?></a>
+            <span class="add-review-button"><?= $block->escapeHtml(__('Add a review')) ?></span>
             
         </div>
     </div>
@@ -43,3 +43,13 @@ $urlForm = $block->getReviewsUrl() . '#review-form';
         </div>
     </div>
 <?php endif; ?>
+<script type="text/x-magento-init">
+    {
+        ".product-reviews-summary": { 
+            "js/lib/scrollTo": {
+                "btn": ".add-review-button",
+                "elementToScroll": ".block.review-add"
+            }
+        }
+    }
+</script>
