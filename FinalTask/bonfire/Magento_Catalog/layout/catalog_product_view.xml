@@ -7,11 +7,14 @@
 -->
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <move element="breadcrumbs" destination="product.info.main" before = "-"/>
-        <move element="page.main.title" destination="product.info.main" after = "breadcrumbs"/>
+        <move element="breadcrumbs" destination="breadcrumbs-wrapper" after = "breadcrumbstitle"/>
+        <move element="page.main.title" destination="product.info.main" after = "breadcrumbs-wrapper"/>
         <move element="product.info.review" destination="product.info.main" after = "page.main.title"/>
 
         <referenceBlock name="product.info.main">
+            <container name = "breadcrumbs-wrapper" htmlTag="div" htmlClass="breadcrumbs-wrapper" before="-">
+                <block class="Magento\Framework\View\Element\Template" name="breadcrumbstitle" template="Magento_Catalog::breadcrumbstitle.phtml" before = "-"></block>
+            </container>
             <container name="stock.sku.tag.wrapper" htmlTag="div" htmlClass="stock-sku-tag-wrapper" after="product.info.price"></container>
             <referenceContainer name="product.info.social">
                 <referenceBlock name="product.info.mailto" remove="true"/>
