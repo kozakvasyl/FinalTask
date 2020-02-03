@@ -45,12 +45,6 @@ define([
     };
     clearSelection();
 
-    //breadcrumbs
-    function shoPreviouslyCrumb () {
-        $('.breadcrumbs').find('.item').last().hide();
-    };
-    shoPreviouslyCrumb();
-
     //select2
     var cselectColor = $('.super-attribute-select').first();
     cselectColor.select2({

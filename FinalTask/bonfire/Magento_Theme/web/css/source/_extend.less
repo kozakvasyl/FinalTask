@@ -76,10 +76,6 @@
     }
 }
 
-//mobile
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
-    
-}
 //tablet
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     .header.content {
@@ -106,6 +102,39 @@
             }
         }
     }
+    .panel.wrapper .panel.header {
+        .hide-header-panel {
+            display: none;
+        }
+    }
+    .sections.nav-sections {
+        .section-items.nav-sections-items {
+            .section-item-content.nav-sections-item-content {
+                padding: 0;
+                .searsh-wishlist-wrapper {
+                    .block.block-search {
+                        margin: 0;
+                        .field.search {
+                            .label::before {
+                                color: @color-gray76;
+                            }
+                            .control {
+                                border-top: none;
+                            }
+                        }
+                    }
+                    .link.wishlist {
+                        display: none;
+                    }
+                }
+            }
+            .section-item-title a {
+                color: @color-yellow;
+                font-weight: 700;
+                font-size: 17px;
+            }
+        }
+    }
 }
 //desctop
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
@@ -118,6 +147,19 @@
         .switcher {
             display: inline-block;
             padding-top: 13px;
+            .options {
+                .action.toggle.active:after {
+                    content: @icon-pointer-up;
+                }
+                .action.toggle:after {
+                    content: @icon-pointer-down;
+                }
+                .action.toggle.active:after, 
+                .action.toggle:after {
+                    margin-top: -1px;
+                    color: @color-blue-gray;
+                }
+            }
         }
         .logo {
             margin: 0 0 0 -67px;
@@ -208,6 +250,11 @@
                 margin-left: 76px;
                 .level0 .level-top {
                     padding: 0 18px;
+                    .ui-menu-icon::after {
+                        content: @icon-pointer-down;
+                        font-size: 21px;
+                        color: @color-blue-gray;
+                    }
                 }
             }
             .searsh-wishlist-wrapper {
@@ -322,7 +369,6 @@
     .level0.home.ui-menu-item {
         margin-right: -3px;
     }
-
 }
 //custom
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l-custome) {
@@ -332,7 +378,6 @@
             left: 0;
         }
     }
-
     .nav-sections .section-item-content, .page-main { 
         padding: 0;
         .navigation .level0 .level-top {

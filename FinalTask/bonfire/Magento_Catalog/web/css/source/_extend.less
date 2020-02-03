@@ -13,18 +13,25 @@
             .breadcrumbs-title {
                 margin-right: 4px;
                 color: @color-grey;
+                position: relative;
+                padding-left: 10px;
                 &::before {
-                    content: @icon-prev;
+                    content: '\e617';
                     font-family: 'icons-blank-theme';
                     font-size: 20px;
                     color: currentColor;
-                    vertical-align: middle;
+                    position: absolute;
+                    left: -7px;
+                    top: -4px;
                 }
             }
             .breadcrumbs {
                 display: inline-block;
                 padding: 0;
                 margin: 0;
+                .items .item:last-child {
+                    display: none;
+                }
             }
         }
         .page-title-wrapper.product {
@@ -257,6 +264,13 @@
                     text-transform: unset;
                 }
                 .facebook-shares-qty, .twitter-qty, .pinterrest-qty {
+                    span {
+                        vertical-align: bottom;
+                        margin: 0;
+                        overflow: hidden;
+                        width: 29px;
+                        text-align: center;
+                    }
                     &::before {
                         content: '';
                         border: 5px solid;
@@ -291,6 +305,9 @@
                 }
                 .twitter-likes::before {
                     content: url('../images/twitter.png');
+                }
+                .twitter-qty span {
+                    width: 15px;
                 }
                 .pinterrest-likes {
                     position: relative;
@@ -360,10 +377,6 @@
     .review-ratings ~ .review-content, .review-ratings ~ .review-details {
         margin-left: 110px;
     }
-}
-//tablet
-.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    
 }
 //desctop
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
