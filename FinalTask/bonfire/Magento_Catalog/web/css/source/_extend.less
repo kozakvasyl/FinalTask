@@ -247,6 +247,7 @@
                         &:last-child {
                             margin: 0;
                             color: @color-blue-gray;
+                            vertical-align: bottom;
                         }
                     }
                 }
@@ -376,9 +377,6 @@
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
     .review-ratings ~ .review-content, .review-ratings ~ .review-details {
         margin-left: 110px;
-    }
-    .product-info-main .product-social-links .social_wrapper > * > *:last-child {
-        vertical-align: middle;
     }
 }
 //desctop
