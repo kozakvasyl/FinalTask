@@ -35,16 +35,6 @@ define([
     };
     addQtyArrows();
 
-    //clear selection
-    function clearSelection () {
-        $('.product-options-wrapper').find('a').on('click',function(){
-            $('#attribute93')[0].selectedIndex = 0;
-            $('#attribute135')[0].selectedIndex = 0;
-            $('#qty').val(1);
-        });
-    };
-    clearSelection();
-
     //select2
     var cselectColor = $('.super-attribute-select').first();
     cselectColor.select2({
@@ -60,5 +50,14 @@ define([
         minimumResultsForSearch: Infinity
     });
     
+    //clear selection
+    function clearSelection () {
+        $('.product-options-wrapper').find('a').on('click',function(){
+            $('#attribute93')[0].selectedIndex = 0;
+            $('#attribute135')[0].selectedIndex = 0;
+            $('#qty').val(1);
+        });
+    };
+    clearSelection();
 
 });

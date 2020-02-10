@@ -8,7 +8,11 @@
 
 <nav class="navigation" role="navigation">
     <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
-        <li class="level0 home <?php if($currentUrl == '/'): ?>active<?php endif; ?>"><a href="<?php echo $storeManager->getStore()->getBaseUrl(); ?>" title="<?php echo __('home') ?>" class="level-top"><span><?php echo __('home') ?></span></a></li>
+        <li class="level0 home <?php if($currentUrl == '/'): ?>active<?php endif; ?>">
+            <a href="<?php echo $storeManager->getStore()->getBaseUrl(); ?>" 
+                title="<?php echo __('home') ?>" 
+                class="level-top"><span><?php echo __('home') ?></span></a>
+        </li>
         <?php echo $_menu; ?>
     </ul>
 </nav>

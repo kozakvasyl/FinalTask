@@ -1,3 +1,8 @@
+//  Font families
+@font-family__lato: Lato, Arial, Helvetica, sans-serif;
+@font-family__base: @font-family__lato;
+
+
 // Breadcrumbs
 //  ---------------------------------------------
 @breadcrumbs__font-size: 14px;
@@ -43,12 +48,12 @@
 
 //custom queries
 //-------------------------------------------
-@screen__l-custome: 1140px;
+@screen__l-custom: 1140px;
 & when (@media-target = 'desktop'), (@media-target = 'all') {
 
-    @media all and (min-width: @screen__l-custome),
+    @media all and (min-width: @screen__l-custom),
     print {
-        .media-width('min', @screen__l-custome);
+        .media-width('min', @screen__l-custom);
     }
 }
 

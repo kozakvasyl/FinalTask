@@ -1,16 +1,17 @@
-
 & when (@media-common = true) {
     //styles for my custon elements---------------
     .column.main .show-element {
         display: block;
         position: relative;
     }
+
     .hide-element, .hide-header-panel {
         &:hover {
             &::after {
                 color: @color-blue-gray;
             }
         }
+
         &::after {
             content: @icon-remove;
             font-family: 'icons-blank-theme';
@@ -22,6 +23,7 @@
             cursor: pointer;
         }
     }
+
     .button-sub, .button-add {
         display: block;
         position: absolute;
@@ -40,6 +42,7 @@
             width: 10px;
         }
     }
+
     .button-add {
         border-bottom: none;
         top: 0;
@@ -48,6 +51,7 @@
             top: 2px;
         }
     }
+    
     .button-sub {
         bottom: 0;
         &::before {
