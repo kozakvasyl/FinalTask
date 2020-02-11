@@ -33,8 +33,8 @@
         <move element="view.addto.wishlist" destination="product.info.options.wrapper.bottom" after = "-"/>
 
         <move element="reviews.tab" destination="content" after="product.info.details"/>
-        <block class="Magento\Review\Block\Product\Review" name="reviews.tab" as="reviews" template="Magento_Review::review.phtml" group="detailed_info">
-            <block class="Magento\Review\Block\Product\View\ListView" name="product.info.product_additional_data" as="product_additional_data" template="product/view/list.phtml"/>
+        <block name="reviews.tab" template="Magento_Review::review.phtml">
+            <block class="Magento\Review\Block\Product\View\ListView" name="product.info.product_additional_data" template="product/view/list.phtml"/>
         </block>
         <move element="product.review.form" destination="content" after = "-"/>
         <referenceBlock name="product.info.details" remove="true"/>

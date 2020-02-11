@@ -1,6 +1,25 @@
 
 //all screen size
 & when (@media-common = true) {
+    .product.media {
+        .fotorama__stage {
+            margin-bottom: 21px;
+        }
+
+        .fotorama__nav-wrap {
+            .fotorama__thumb-border {
+                display: none;
+            }
+
+            .fotorama__nav__frame.fotorama__nav__frame--thumb {
+                margin-right: 15px;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
     .product-info-main {
         margin-bottom: 20px;
         & > * {
